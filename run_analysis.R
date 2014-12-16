@@ -166,7 +166,6 @@ names(column_names_select) <- "tidy.txt_variable_name"
 column_names_selected <- left_join(column_names_select, column_names)
 
 # clean up interim data
-rm(column_names)
 rm(column_names_select)
 rm(data_all)
 
@@ -178,13 +177,15 @@ data_melt <- melt(data_all_select, c("subject", "activity"))
 data_summary <- dcast(data_melt, activity + subject ~ variable, mean)
 
 # save out summarized data to text file "tidy.txt" [delimiter = " "]
-file_out <- paste(path_wd, "\\UCI HAR Dataset\\tidy.txt", sep = "")
-write.table(data_summary, file_out, row.names = FALSE)
-
+path_file_out <- paste(path_wd, "\\UCI HAR Dataset", sep = "")
+write.table(data_summary, paste(path_file_out, "\\tidy.txt", sep = ""), row.names = FALSE)
+write.table(column_names_selected, paste(path_file_out, "\\codebook.txt", sep = ""), row.names = FALSE)
+            
 # clean up interim data
 rm(data_melt)
 
 #############################################################################################
 # review output data
 
-# output <- read.table(file_out, header = TRUE)
+# output_data <- read.table(paste(path_file_out, "\\tidy.txt", sep = ""), header = TRUE)
+# output_code <- read.table(paste(path_file_out, "\\codebook.txt", sep = ""), header = TRUE)
