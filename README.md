@@ -1,10 +1,5 @@
-Coursera_Getting_Cleaning_Data
+run_analysis.R
 ==============================
-
-Repo for Course Project of Coursera: Getting and Cleaning Data 
-
-### run_analysis.R
-
 **Developed on:**
 
 Windows 7 Professional 64-bit SP1 
