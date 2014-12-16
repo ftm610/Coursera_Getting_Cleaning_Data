@@ -1,4 +1,4 @@
-tidy.txt codebook
+run_analysis.R output (tidy.txt) codebook
 ==============================
 
 **subject** = subject id from raw subject_temp.txt and subject_train.txt files  
@@ -6,7 +6,7 @@ tidy.txt codebook
 **activity** = description from activity_label.txt joined to y_test.txt and y_train.txt data  
 
 
-**ALL OTHER variable names were modified from their raw formats in features.txt**  
+**ALL OTHER output variable names were modified from their raw formats in features.txt**  
 
 Variable names output to tidy.txt are automatically generated to be unique and valid and additionally depend upon the select statement to filter "mean" and "std" variables only (see README.md).  
 
