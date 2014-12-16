@@ -27,7 +27,8 @@ reshape2 version 1.4.1
 
 2. Merges the training and the test sets to create one data set.  
 	a. Reads in, formats and combines the following common, test and train text files: activity_labels, features, subject_test, X_test, y_test, subject_train, X_train, y_train  
-	b. Subject data is assigned to "subject" variable.  Source dataset (test or train) is recorded in the "dataset" variable.    	c. Generates a single tidy data frame "data_all" with dataset (test or train), subject, activity (label) and the variables selected in Step 3 for further analysis.  Each row is a single observation, each column is a single variable.  
+	b. Subject data is assigned to "subject" variable.  Source dataset (test or train) is recorded in the "dataset" variable.  
+	c. Generates a single tidy data frame "data_all" with dataset (test or train), subject, activity (label) and the variables selected in Step 3 for further analysis.  Each row is a single observation, each column is a single variable.  
 	*See Also: 4a, 5a and code comments for more detail
 
 
