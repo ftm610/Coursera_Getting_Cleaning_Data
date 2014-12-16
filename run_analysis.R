@@ -30,7 +30,7 @@
 path_wd = "C:\\Users\\Frank\\Documents\\Coursera\\Getting_And_Cleaning_Data\\CourseProject"
 setwd(path_wd)
 
-# load packages used
+# load required packages
 library(dplyr)
 library(reshape2)
 
@@ -176,7 +176,7 @@ rm(data_all)
 data_melt <- melt(data_all_select, c("subject", "activity"))
 data_summary <- dcast(data_melt, activity + subject ~ variable, mean)
 
-# save out summarized data to text file "tidy.txt" [delimiter = " "]
+# save out summarized data to text file "tidy.txt" and variable names "codebook.txt" [delimiter = " "]
 path_file_out <- paste(path_wd, "\\UCI HAR Dataset", sep = "")
 write.table(data_summary, paste(path_file_out, "\\tidy.txt", sep = ""), row.names = FALSE)
 write.table(column_names_selected, paste(path_file_out, "\\codebook.txt", sep = ""), row.names = FALSE)
