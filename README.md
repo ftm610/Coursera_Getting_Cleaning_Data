@@ -49,5 +49,6 @@ reshape2 version 1.4.1
 6. Creates a second, independent tidy data set with the average of each variable for each activity and each subject.  
 	a. Summarizes each variable by activity and subject using reshape2: melt and dcast  
 	b. Writes out a space delimited text file "tidy.txt" using write.table with row.names = FALSE  
-	c. Code to properly read output file back into R is included (commented out at end)  
+	c. Writes out a space delimited text file "codebook.txt" (from column_names_select, see 3b) using write.table with row.names = FALSE  
+	d. Code to properly read output file back into R is included (commented out at end)  
 	*See Also: 4b, 5b and CodeBook.md for description of variables
