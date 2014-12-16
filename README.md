@@ -2,17 +2,14 @@ run_analysis.R
 ==============================
 **Developed on:**
 
-Windows 7 Professional 64-bit SP1 
-
-R version 3.1.2 (2014-10-31) -- "Pumpkin Helmet"
-
+Windows 7 Professional 64-bit SP1  
+R version 3.1.2 (2014-10-31) -- "Pumpkin Helmet"  
 RStudio version 0.98.1087
 
 
 **R packages required:**
 
-dplyr version 0.3.0.2
-
+dplyr version 0.3.0.2  
 reshape2 version 1.4.1
 
 
@@ -22,23 +19,15 @@ reshape2 version 1.4.1
 **To run this code, first update the path (path_wd) to your preferred working directory.**
 
 
-1. Downloads and extracts raw zipped data to user defined working directory.
-
-	a. Downloads raw zipped data to working directory from web: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
-	
-	b. Extracts files to working directory
-	
+1. Downloads and extracts raw zipped data to user defined working directory.  
+	a. Downloads raw zipped data to working directory from web: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip  
+	b. Extracts files to working directory  
 	c. Records date and time of download to the "dateDownloaded" variable
 
 
-2. Merges the training and the test sets to create one data set.
-
-	a. Reads in, formats and combines the following common, test and train text files: activity_labels, features, subject_test, X_test, y_test, subject_train, X_train, y_train
-
-	b. Subject data is assigned to "subject" variable.  Source dataset (test or train) is recorded in the "dataset" variable.   
-
-	c. Generates a single tidy data frame "data_all" with dataset (test or train), subject, activity (label) and the variables selected in Step 3 for further analysis.  Each row is a single observation, each column is a single variable.  
-
+2. Merges the training and the test sets to create one data set.  
+	a. Reads in, formats and combines the following common, test and train text files: activity_labels, features, subject_test, X_test, y_test, subject_train, X_train, y_train  
+	b. Subject data is assigned to "subject" variable.  Source dataset (test or train) is recorded in the "dataset" variable.  	c. Generates a single tidy data frame "data_all" with dataset (test or train), subject, activity (label) and the variables selected in Step 3 for further analysis.  Each row is a single observation, each column is a single variable.  
 	*See Also: 4a, 5a and code comments for more detail
 
 
