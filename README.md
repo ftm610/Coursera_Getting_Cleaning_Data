@@ -5,16 +5,24 @@ Repo for Course Project of Coursera: Getting and Cleaning Data
 
 ### run_analysis.R
 
-Developed on: 
+**Developed on:**
+
 Windows 7 Professional 64-bit SP1 
+
 R version 3.1.2 (2014-10-31) -- "Pumpkin Helmet"
+
 RStudio version 0.98.1087
 
-R packages required:
+
+**R packages required:**
+
 dplyr version 0.3.0.2
+
 reshape2 version 1.4.1
 
+
 **To run this code, first update the path (path_wd) to your preferred working directory.**
+
 
 ### This code performs the following actions:
 
