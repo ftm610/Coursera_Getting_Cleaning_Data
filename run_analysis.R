@@ -117,7 +117,7 @@ var_names <- make.names(features$V2, unique = TRUE)
 names(data_x_test) <- var_names
 names(data_x_train) <- var_names
 
-# document original and modified variable names for README.txt
+# document original and modified variable names for codebook.txt
 column_names <- cbind(features, var_names)
 names(column_names) <- c("features.txt_column_number", "features.txt_variable_name", "tidy.txt_variable_name")
 column_names <- tbl_df(column_names)
