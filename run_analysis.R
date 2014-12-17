@@ -176,6 +176,11 @@ rm(data_all)
 data_melt <- melt(data_all_select, c("subject", "activity"))
 data_summary <- dcast(data_melt, activity + subject ~ variable, mean)
 
+# rename variables
+ds_rename <- paste("mean[", names(data_summary), "]", sep = "")
+ds_rename[1:2] <- names(data_summary)[1:2]
+names(data_summary) <- ds_rename
+
 # save out summarized data to text file "tidy.txt" and variable names "codebook.txt" [delimiter = " "]
 path_file_out <- paste(path_wd, "\\UCI HAR Dataset", sep = "")
 write.table(data_summary, paste(path_file_out, "\\tidy.txt", sep = ""), row.names = FALSE)
@@ -188,4 +193,4 @@ rm(data_melt)
 # review output data
 
 # output_data <- read.table(paste(path_file_out, "\\tidy.txt", sep = ""), header = TRUE)
-# output_code <- read.table(paste(path_file_out, "\\codebook.txt", sep = ""), header = TRUE)
+# output_codebook <- read.table(paste(path_file_out, "\\codebook.txt", sep = ""), header = TRUE)
